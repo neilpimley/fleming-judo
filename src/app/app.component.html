@@ -1,30 +1,36 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
+<nav class="navbar navbar-expand-lg site-nav">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/">
+      <img src="assets/images/logo.jpg" alt="Fleming Judo School">
+      <span>Fleming Judo</span>
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
-      <ul class="navbar-nav">
-        <li class="nav-item mx-3">
-          <a class="nav-link fs-4" routerLink="/">Home</a>
+    <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+      <ul class="navbar-nav align-items-lg-center">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
         </li>
-        <li class="nav-item mx-3">
-          <a class="nav-link fs-4" routerLink="/about">About</a>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about" routerLinkActive="active">About</a>
         </li>
-        <li class="nav-item mx-3">
-          <a class="nav-link fs-4" routerLink="/why-judo">Why Judo</a>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/why-judo" routerLinkActive="active">Why Judo</a>
         </li>
-        <li class="nav-item mx-3">
-          <a class="nav-link fs-4" routerLink="/offer">What We Offer</a>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/offer" routerLinkActive="active">What We Offer</a>
         </li>
-        <li class="nav-item mx-3">
-          <a class="nav-link fs-4" routerLink="/signup">Sign Up</a>
+        <li class="nav-item">
+          <a class="nav-link nav-cta" routerLink="/signup" routerLinkActive="active">Sign Up</a>
         </li>
-        <li class="nav-item mx-3">
-          <a class="nav-link fs-4" routerLink="/contact">Contact</a>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
-<router-outlet></router-outlet>
+<main>
+  <router-outlet></router-outlet>
+</main>
